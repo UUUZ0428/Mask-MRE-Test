@@ -19,7 +19,7 @@ export default class HelloWorld {
 
 	/**
 	 * When a user joins, attach something to them
-	 */
+
 	private userJoined(user: MRE.user){
 		//print the user's name to the console
 		console.log(`${user.name} joined`);
@@ -38,10 +38,11 @@ export default class HelloWorld {
 			}
 		)
 	}
+	*/
 
 	/**
 	 * Remove the attachment (if any) and destroy it when a user leaves
-	 */
+
 	private userLeft(user: MRE.User){
 		if(this.attachments.has(user.id)){
 			const attachment = thihs.attachments.get(user.id);
@@ -58,6 +59,7 @@ export default class HelloWorld {
 
 		}
 	}
+	*/
 
 	/**
 	 * Once the context is "started", initialize the app.
@@ -66,6 +68,7 @@ export default class HelloWorld {
 		// set up somewhere to store loaded assets (meshes, textures, animations, gltfs, etc.)
 		this.assets = new MRE.AssetContainer(this.context);
 
+		/*
 		//spawn a copy copy of a kit import {  } from "this.ketItem";
 		this.kitItem = MRE.Actor.CreateFromLibrary(this.context. {
 			//the number below is the item's artifact
@@ -88,6 +91,7 @@ export default class HelloWorld {
 			euler.z * MRE.DegreesToReadians
 		) : new MRE.Quaternion();
 	}
+	*/
 
 		// Create a new actor with no mesh, but some text.
 		this.text = MRE.Actor.Create(this.context, {
