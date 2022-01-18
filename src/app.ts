@@ -18,80 +18,11 @@ export default class HelloWorld {
 	}
 
 	/**
-	 * When a user joins, attach something to them
-
-	private userJoined(user: MRE.user){
-		//print the user's name to the console
-		console.log(`${user.name} joined`);
-
-		//attach an item to the user
-		MRE.Actor.CreateFromLibrary(
-			this.context,
-			{
-				resourceId: 'artifact:1915731289445499525',
-				actor: {
-					attachment: {
-						attachPoint: 'head',
-						userId: user.id
-					}
-				}
-			}
-		)
-	}
-	*/
-
-	/**
-	 * Remove the attachment (if any) and destroy it when a user leaves
-
-	private userLeft(user: MRE.User){
-		if(this.attachments.has(user.id)){
-			const attachment = thihs.attachments.get(user.id);
-
-			// Detach the Actor from the user
-			attachment.detach();
-
-			//Destroy the Actor
-			attachment.destroy();
-
-			//Remove the attachment from the 'attachments' map
-			thihs.attachments.delete(user.id);
-
-
-		}
-	}
-	*/
-
-	/**
 	 * Once the context is "started", initialize the app.
 	 */
 	private async started() {
 		// set up somewhere to store loaded assets (meshes, textures, animations, gltfs, etc.)
 		this.assets = new MRE.AssetContainer(this.context);
-
-		/*
-		//spawn a copy copy of a kit import {  } from "this.ketItem";
-		this.kitItem = MRE.Actor.CreateFromLibrary(this.context. {
-			//the number below is the item's artifact
-			resourceId: 'artifact:1915731289445499525',
-			actor: {
-				transform:{
-					local: {
-						scale: {x: 0.5, y:0.5, z:0.5 }
-					}
-				}
-			}
-		});
-	}
-
-	function Unity2QuaternionRotation(euler: MRE.Vector3Like)
-		: MRE.Quaternion{
-		return euler ? MRE.Quaternion.FromEulerAngles()
-			euler.x * MRE.DegreesToReadians,
-			euler.y * MRE.DegreesToRadians,
-			euler.z * MRE.DegreesToReadians
-		) : new MRE.Quaternion();
-	}
-	*/
 
 		// Create a new actor with no mesh, but some text.
 		this.text = MRE.Actor.Create(this.context, {
@@ -108,7 +39,6 @@ export default class HelloWorld {
 				}
 			}
 		});
-
 
 		// Here we create an animation for our text actor. First we create animation data, which can be used on any
 		// actor. We'll reference that actor with the placeholder "text".
