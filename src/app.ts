@@ -11,6 +11,7 @@ import * as MRE from '@microsoft/mixed-reality-extension-sdk';
 export default class HelloWorld {
 	private text: MRE.Actor = null;
 	private cube: MRE.Actor = null;
+	private kitItem: MRE.Actor = null;
 	private assets: MRE.AssetContainer;
 
 	constructor(private context: MRE.Context) {
@@ -39,6 +40,17 @@ export default class HelloWorld {
 	private async started() {
 		// set up somewhere to store loaded assets (meshes, textures, animations, gltfs, etc.)
 		this.assets = new MRE.AssetContainer(this.context);
+
+		this.kitItem = MRE.Actor.CreateFromLibrary(this.context, {
+			resourceId: 'acrtifact:1915731289445499525',
+			actor: {
+				transform: {
+					local: {
+						scale: { x: 0.5, y: 0.5, z: 0.5}
+					}
+				}
+			}
+		}
 
 		// Create a new actor with no mesh, but some text.
 		this.text = MRE.Actor.Create(this.context, {
