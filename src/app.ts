@@ -17,6 +17,22 @@ export default class HelloWorld {
 		this.context.onStarted(() => this.started());
 	}
 
+	private userJoined(user: MRE.User) {
+		//console.log(`${user.name} joined`);
+
+		MRE.Actor.CreateFromLibrary(
+			this.context, {
+				resourceId: 'artifact:1915731289445499525',
+				actor: {
+					attachment: {
+						attachPoint: 'head',
+						userId: user.id
+					}
+				}
+		}
+		)
+	}
+
 	/**
 	 * Once the context is "started", initialize the app.
 	 */
