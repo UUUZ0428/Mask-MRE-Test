@@ -34,6 +34,7 @@ export default class HelloWorld {
 		)
 	}
 
+
 	/**
 	 * Once the context is "started", initialize the app.
 	 */
@@ -52,6 +53,8 @@ export default class HelloWorld {
 			}
 		}
 
+			/**
+		
 		// Create a new actor with no mesh, but some text.
 		this.text = MRE.Actor.Create(this.context, {
 			actor: {
@@ -155,13 +158,15 @@ export default class HelloWorld {
 		buttonBehavior.onClick(_ => {
 			flipAnim.play();
 		});
+		*/
+		
 	}
 
 	/**
 	 * Generate keyframe data for a simple spin animation.
 	 * @param duration The length of time in seconds it takes to complete a full revolution.
 	 * @param axis The axis of rotation in local space.
-	 */
+	 
 	private generateSpinKeyframes(duration: number, axis: MRE.Vector3): Array<MRE.Keyframe<MRE.Quaternion>> {
 		return [{
 			time: 0 * duration,
@@ -180,4 +185,5 @@ export default class HelloWorld {
 			value: MRE.Quaternion.RotationAxis(axis, 2 * Math.PI)
 		}];
 	}
+	*/
 }
