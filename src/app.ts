@@ -74,7 +74,7 @@ export default class WearAMask {
 		// spawn a copy of a kit item
 		this.kitItem = MRE.Actor.CreateFromLibrary(this.context, {
 			// the number below is the item's artifact id.
-			resourceId: 'artifact:1915731289445499525'
+			resourceId: 'artifact:1915812992885195736'
 		});
 
 		//==========================
@@ -88,14 +88,14 @@ export default class WearAMask {
 	 */
 	private userJoined(user: MRE.User) {
 		// print the user's name to the console
-		console.log(`${user.name} joined`);
+		//console.log(`${user.name} joined`);
 
 		// attach an item to the user
 		// Assign the return value of CreateFromLibrary() to a variable.
 		const attachment = MRE.Actor.CreateFromLibrary(
 			this.context,
 			{
-				resourceId: 'artifact:1915731289445499525',
+				resourceId: 'artifact:1915812992885195736',
 				actor: {
 					attachment: {
 						attachPoint: 'head',
