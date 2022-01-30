@@ -13,7 +13,7 @@ import { UserSyncFix } from './sync-fix'
 /**
  * The main class of this app. All the logic goes here.
  */
-export default class WearAMask {
+export default class HelloWorld {
 	private kitItem: MRE.Actor = null;
 	private assets: MRE.AssetContainer;
 
